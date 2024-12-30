@@ -11,10 +11,10 @@
 
     <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
         android:defaultValue="false"
-        android:key="manage_audio_focus"
+        android:key="manage_haptic_generator"
         android:layout="@layout/list_item_view_switch"
-        android:summary="@string/pref_summary_manage_audio_focus"
-        android:title="@string/pref_title_manage_audio_focus" />
+        android:summary="@string/pref_summary_haptic_generator"
+        android:title="@string/pref_title_haptic_generator" />
 
     <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESeekBarPreference
         android:defaultValue="0"
