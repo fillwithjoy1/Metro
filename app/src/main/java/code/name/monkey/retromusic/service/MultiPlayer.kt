@@ -26,6 +26,7 @@ import code.name.monkey.retromusic.extensions.uri
 import code.name.monkey.retromusic.model.Song
 import code.name.monkey.retromusic.service.playback.Playback.PlaybackCallbacks
 import code.name.monkey.retromusic.util.PreferenceUtil.isGapLessPlayback
+import code.name.monkey.retromusic.util.PreferenceUtil.isHapticGeneratorActive
 import code.name.monkey.retromusic.util.logE
 
 /**
@@ -127,8 +128,10 @@ class MultiPlayer(context: Context) : LocalPlayback(context) {
         super.start()
         return try {
             mCurrentMediaPlayer.start()
-            hapticGenerator = HapticGenerator.create(mCurrentMediaPlayer.audioSessionId)
-            hapticGenerator?.setEnabled(true)
+            if (isHapticGeneratorActive) {
+                hapticGenerator = HapticGenerator.create(audioSessionId)
+                hapticGenerator?.setEnabled(true)
+            }
             true
         } catch (e: IllegalStateException) {
             false
