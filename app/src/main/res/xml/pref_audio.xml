@@ -21,6 +21,7 @@
         android:key="manage_haptic_generator"
         android:layout="@layout/list_item_view_switch"
         android:summary="@string/pref_summary_haptic_generator"
+        app:icon="@drawable/ic_spatial_speaker"
         android:title="@string/pref_title_haptic_generator" />
 
     <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESeekBarPreference
